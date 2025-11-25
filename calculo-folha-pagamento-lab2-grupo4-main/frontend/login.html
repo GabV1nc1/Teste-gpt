@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Sistema de Folha de Pagamento</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#10b981',
+            'primary-dark': '#059669',
+            background: '#ffffff',
+            foreground: '#0f172a',
+            muted: '#f1f5f9',
+            'muted-foreground': '#64748b',
+            border: '#e2e8f0',
+            accent: '#3b82f6',
+            destructive: '#ef4444'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-muted min-h-screen">
+  <div class="min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+      <!-- Logo e Título -->
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-2xl mb-4">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h1 class="text-3xl font-bold text-foreground mb-2">Sistema de Folha de Pagamento</h1>
+        <p class="text-muted-foreground">Faça login para acessar o sistema</p>
+      </div>
+
+      <!-- Card de Login -->
+      <div class="bg-background rounded-xl shadow-lg border border-border p-8">
+        <form id="loginForm">
+          <div class="space-y-6">
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-medium text-foreground mb-2">
+                Email
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email"
+                value=""
+                required
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="seu@email.com"
+              >
+            </div>
+
+            <!-- Senha -->
+            <div>
+              <label for="password" class="block text-sm font-medium text-foreground mb-2">
+                Senha
+              </label>
+              <input 
+                type="password" 
+                id="password" 
+                name="password"
+                value=""
+                required
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="••••••••"
+              >
+            </div>
+
+            <!-- Lembrar-me -->
+            <div class="flex items-center">
+              <input 
+                type="checkbox" 
+                id="remember" 
+                class="w-4 h-4 text-primary border-border rounded focus:ring-primary"
+              >
+              <label for="remember" class="ml-2 text-sm text-muted-foreground">
+                Lembrar-me
+              </label>
+            </div>
+
+            <!-- Botão de Login -->
+            <button 
+              type="submit"
+              class="w-full bg-primary hover:bg-primary-dark text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200"
+            >
+              Entrar
+            </button>
+          </div>
+        </form>
+
+        <!-- Credenciais de Teste -->
+        <div class="mt-6 p-4 bg-muted rounded-lg">
+          <p class="text-xs font-medium text-muted-foreground mb-2">Credenciais de teste:</p>
+          <p class="text-xs text-muted-foreground">Email: admin@empresa.com</p>
+          <p class="text-xs text-muted-foreground">Senha: admin123</p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <p class="text-center text-sm text-muted-foreground mt-8">
+        © 2025 Sistema de Folha de Pagamento. Todos os direitos reservados.
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/login.js"></script>
+</body>
+</html>
